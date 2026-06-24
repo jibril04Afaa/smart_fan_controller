@@ -1,0 +1,11 @@
+- **Node 1: STM32 (The Main Controller)**
+    - Runs **FreeRTOS**.
+    - Manages the system state machine (Off, Low, High, Auto).
+    - Handles user input via push buttons.
+    - Displays system status via LEDs.
+    - Sends control commands to the Pico.
+- **Node 2: Raspberry Pi Pico (The Motor Driver Node)**
+    - Runs bare-metal C.
+    - Listens for commands from the STM32.
+    - Drives the DC motor using PWM (Pulse Width Modulation).
+- **The Link:** A physical communication bus between the two boards.
