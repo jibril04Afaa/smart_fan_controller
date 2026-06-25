@@ -1,5 +1,5 @@
 <div align="left">
-<h1>🌬️ Distributed Smart Fan Controller</h1>
+<h1>Distributed Smart Fan Controller</h1>
 
 <p>
 <!-- <a href="#"><img src="[https://img.shields.io/badge/STM32-%2303234B.svg?style=for-the-badge&logo=stmicroelectronics&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/STM32-%252303234B.svg%3Fstyle%3Dfor-the-badge%26logo%3Dstmicroelectronics%26logoColor%3Dwhite)" alt="STM32"></a>
