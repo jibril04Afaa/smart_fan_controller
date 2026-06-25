@@ -1,12 +1,12 @@
-<div align="center">
+<div align="left">
 <h1>🌬️ Distributed Smart Fan Controller</h1>
 
 <p>
-<a href="#"><img src="[https://img.shields.io/badge/STM32-%2303234B.svg?style=for-the-badge&logo=stmicroelectronics&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/STM32-%252303234B.svg%3Fstyle%3Dfor-the-badge%26logo%3Dstmicroelectronics%26logoColor%3Dwhite)" alt="STM32"></a>
+<!-- <a href="#"><img src="[https://img.shields.io/badge/STM32-%2303234B.svg?style=for-the-badge&logo=stmicroelectronics&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/STM32-%252303234B.svg%3Fstyle%3Dfor-the-badge%26logo%3Dstmicroelectronics%26logoColor%3Dwhite)" alt="STM32"></a>
 <a href="#"><img src="[https://img.shields.io/badge/Raspberry%20Pi%20Pico-C51A4A?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Raspberry%2520Pi%2520Pico-C51A4A%3Fstyle%3Dfor-the-badge%26logo%3DRaspberry%2520Pi%26logoColor%3Dwhite)" alt="Raspberry Pi Pico"></a>
 <a href="#"><img src="[https://img.shields.io/badge/FreeRTOS-%2320232a.svg?style=for-the-badge&logo=freertos&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/FreeRTOS-%252320232a.svg%3Fstyle%3Dfor-the-badge%26logo%3Dfreertos%26logoColor%3Dwhite)" alt="FreeRTOS"></a>
 <a href="#"><img src="[https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/C-00599C%3Fstyle%3Dfor-the-badge%26logo%3Dc%26logoColor%3Dwhite)" alt="C"></a>
-<a href="#"><img src="[https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/CMake-%2523008FBA.svg%3Fstyle%3Dfor-the-badge%26logo%3Dcmake%26logoColor%3Dwhite)" alt="CMake"></a>
+<a href="#"><img src="[https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/CMake-%2523008FBA.svg%3Fstyle%3Dfor-the-badge%26logo%3Dcmake%26logoColor%3Dwhite)" alt="CMake"></a> -->
 </p>
 
 <p><b>A multi-node, RTOS-driven embedded system designed to mirror modern automotive Electronic Control Unit (ECU) architectures.</b></p>
@@ -14,7 +14,7 @@
 
 <br />
 
-<h2>📑 Table of Contents</h2>
+<h2>Table of Contents</h2>
 <ul>
 <li><a href="#-system-architecture">System Architecture</a></li>
 <li><a href="#-fault-tolerance--hardening">Fault Tolerance &amp; Hardening</a></li>
@@ -26,7 +26,7 @@
 
 <hr />
 
-<h2 id="-system-architecture">🧠 System Architecture</h2>
+<h2 id="-system-architecture">System Architecture</h2>
 <p>The system is distributed across two microcontrollers, separating high-level system logic from low-level hardware actuation:</p>
 
 <h3>Node 1: Main Controller (STM32)</h3>
@@ -62,7 +62,7 @@
 
 <hr />
 
-<h2 id="-fault-tolerance--hardening">🛡️ Fault Tolerance &amp; Hardening (Phase 4)</h2>
+<h2 id="-fault-tolerance--hardening">Fault Tolerance &amp; Hardening (Phase 4)</h2>
 <p>This project goes beyond simply spinning a motor by implementing production-grade edge case handling:</p>
 <ul>
 <li><strong>Communication Timeouts:</strong> The STM32 actively monitors the bus. If the physical wire is unplugged, the system safely transitions to an error state.</li>
@@ -71,7 +71,7 @@
 
 <hr />
 
-<h2 id="-hardware-setup">🔌 Hardware Setup</h2>
+<h2 id="-hardware-setup">Hardware Setup</h2>
 <p>To establish the physical communication link between the two nodes, wire them as follows:</p>
 <table>
 <thead>
@@ -102,7 +102,7 @@
 
 <hr />
 
-<h2 id="-repository-structure">📂 Repository Structure</h2>
+<h2 id="-repository-structure">Repository Structure</h2>
 <pre><code>smart-fan-controller/
 ├── shared/                 # Shared protocol header (Single Source of Truth)
 │   └── comms_protocol.h
@@ -111,7 +111,7 @@
 
 <hr />
 
-<h2 id="-getting-started">🚀 Getting Started</h2>
+<h2 id="-getting-started">Getting Started</h2>
 
 <h3>Prerequisites</h3>
 <ul>
@@ -138,13 +138,3 @@ make</code></pre>
 
 <hr />
 
-<h2 id="-development-roadmap">📅 Development Roadmap (7-Day Sprint)</h2>
-<ul style="list-style-type: none; padding-left: 0;">
-<li><input type="checkbox" checked disabled> <strong>Day 1:</strong> Project Scaffolding &amp; Toolchain Verification</li>
-<li><input type="checkbox" disabled> <strong>Day 2:</strong> Phase 1 - Foundation (Hardware &amp; Custom Protocol)</li>
-<li><input type="checkbox" disabled> <strong>Day 3:</strong> Phase 2 - Pico Motor Node (Hardware PWM &amp; Parser)</li>
-<li><input type="checkbox" disabled> <strong>Day 4:</strong> Phase 3A - STM32 RTOS Foundation &amp; Button Tasks</li>
-<li><input type="checkbox" disabled> <strong>Day 5:</strong> Phase 3B - FSM State Manager &amp; UART TX Task</li>
-<li><input type="checkbox" disabled> <strong>Day 6:</strong> Phase 4 - Hardening (Timeouts &amp; Checksum Validation)</li>
-<li><input type="checkbox" disabled> <strong>Day 7:</strong> Integration, Tuning &amp; Documentation</li>
-</ul>
