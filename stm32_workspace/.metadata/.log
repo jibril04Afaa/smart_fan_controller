@@ -1,0 +1,48 @@
+!SESSION 2026-06-25 15:12:19.436 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\stm32_workspace
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-06-25 15:12:24.898
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-25 15:12:24.901
+!MESSAGE Log4j2 initialized with config file C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\stm32_workspace\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-25 15:12:32.201
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-06-25 15:18:40.118 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-06-25 15:19:00.538
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-25 15:19:00.539
+!MESSAGE Log4j2 initialized with config file C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\stm32_workspace\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-25 15:19:08.109
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-06-25 15:19:36.916
+!MESSAGE Indexed 'stm32_workspace' (24 sources, 146 headers) in 3.11 sec: 13,031 declarations; 47,922 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.39%)
+!SESSION 2026-06-25 15:25:05.391 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-06-25 15:25:11.860
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-25 15:25:11.861
+!MESSAGE Log4j2 initialized with config file C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\stm32_workspace\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-25 15:25:21.761
+!MESSAGE Started RMI Server, listening on port 41337
