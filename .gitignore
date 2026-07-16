@@ -1,0 +1,45 @@
+# STM32CubeIDE workspace metadata
+.metadata/
+
+# Build output
+Debug/
+Release/
+
+# C/C++ Generic Build Artifacts
+*.o
+*.obj
+*.ko
+*.su
+*.a
+*.lib
+*.so
+*.dll
+
+# ESP32 / ESP-IDF Build Files
+node2_esp32_motor/build/
+sdkconfig
+sdkconfig.old
+
+# Generated binaries
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+
+# Eclipse / CubeIDE files
+RemoteSystemsTempFiles/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code & Other Editors & IDEs
+.vscode/
+.idea/
+*.swp
+
+# Temporary files
+*.tmp
+*.log
