@@ -2,14 +2,14 @@
 <h1>Distributed Smart Fan Controller</h1>
 
 <p>
-<!-- <a href="#"><img src="[https://img.shields.io/badge/STM32-%2303234B.svg?style=for-the-badge&logo=stmicroelectronics&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/STM32-%252303234B.svg%3Fstyle%3Dfor-the-badge%26logo%3Dstmicroelectronics%26logoColor%3Dwhite)" alt="STM32"></a>
-<a href="#"><img src="[https://img.shields.io/badge/Raspberry%20Pi%20Pico-C51A4A?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Raspberry%2520Pi%2520Pico-C51A4A%3Fstyle%3Dfor-the-badge%26logo%3DRaspberry%2520Pi%26logoColor%3Dwhite)" alt="Raspberry Pi Pico"></a>
-<a href="#"><img src="[https://img.shields.io/badge/FreeRTOS-%2320232a.svg?style=for-the-badge&logo=freertos&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/FreeRTOS-%252320232a.svg%3Fstyle%3Dfor-the-badge%26logo%3Dfreertos%26logoColor%3Dwhite)" alt="FreeRTOS"></a>
-<a href="#"><img src="[https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/C-00599C%3Fstyle%3Dfor-the-badge%26logo%3Dc%26logoColor%3Dwhite)" alt="C"></a>
-<a href="#"><img src="[https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/CMake-%2523008FBA.svg%3Fstyle%3Dfor-the-badge%26logo%3Dcmake%26logoColor%3Dwhite)" alt="CMake"></a> -->
+<!-- <a href="#"><img src="https://img.shields.io/badge/STM32-%2303234B.svg?style=for-the-badge&logo=stmicroelectronics&logoColor=white" alt="STM32"></a>
+<a href="#"><img src="https://img.shields.io/badge/ESP32-E7352C.svg?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32"></a>
+<a href="#"><img src="https://img.shields.io/badge/FreeRTOS-%2320232a.svg?style=for-the-badge&logo=freertos&logoColor=white" alt="FreeRTOS"></a>
+<a href="#"><img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C"></a>
+<a href="#"><img src="https://img.shields.io/badge/ESP--IDF-E7352C.svg?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP-IDF"></a> -->
 </p>
 
-<p><b>A multi-node, RTOS-driven embedded system designed to mirror modern automotive Electronic Control Unit (ECU) architectures.</b></p>
+<p><b>A multi-node, Dual-RTOS distributed embedded system designed to mirror modern automotive Electronic Control Unit (ECU) architectures.</b></p>
 </div>
 
 <br />
@@ -42,13 +42,13 @@
 </li>
 </ul>
 
-<h3>Node 2: Motor Actuator (Raspberry Pi Pico)</h3>
+<h3>Node 2: Motor Actuator (ESP32)</h3>
 <ul>
-<li><strong>Environment:</strong> Bare-metal C (RP2040 SDK)</li>
+<li><strong>Environment:</strong> ESP-IDF (FreeRTOS natively)</li>
 <li><strong>Responsibilities:</strong>
 <ul>
-<li><strong>Bus Listener:</strong> Parses incoming UART frames from the STM32.</li>
-<li><strong>Actuation:</strong> Maps commanded percentage (0-100%) to a hardware PWM duty cycle to drive a DC motor.</li>
+<li><strong>Bus Listener:</strong> Parses incoming UART frames from the STM32 via hardware UART.</li>
+<li><strong>Actuation:</strong> Maps commanded percentage (0-100%) to a hardware PWM duty cycle utilizing the ESP32's dedicated PWM peripherals to drive a DC motor.</li>
 </ul>
 </li>
 </ul>
@@ -66,7 +66,7 @@
 <p>This project goes beyond simply spinning a motor by implementing production-grade edge case handling:</p>
 <ul>
 <li><strong>Communication Timeouts:</strong> The STM32 actively monitors the bus. If the physical wire is unplugged, the system safely transitions to an error state.</li>
-<li><strong>EMI / Noise Rejection:</strong> The bare-metal Pico parser validates a checksum on every incoming packet. If electrical noise from the DC motor corrupts a byte, the packet is safely discarded to prevent erratic motor behavior.</li>
+<li><strong>EMI / Noise Rejection:</strong> The ESP32 parser validates a checksum on every incoming packet. If electrical noise from the DC motor corrupts a byte, the packet is safely discarded to prevent erratic motor behavior.</li>
 </ul>
 
 <hr />
@@ -77,7 +77,7 @@
 <thead>
 <tr>
 <th>STM32 (Node 1)</th>
-<th>Raspberry Pi Pico (Node 2)</th>
+<th>ESP32 (Node 2)</th>
 <th>Purpose</th>
 </tr>
 </thead>
@@ -85,7 +85,7 @@
 <tr>
 <td><code>UART TX</code></td>
 <td><code>UART RX</code></td>
-<td>Transmit commands to Pico</td>
+<td>Transmit commands to ESP32</td>
 </tr>
 <tr>
 <td><code>UART RX</code></td>
@@ -107,7 +107,7 @@
 ├── shared/                 # Shared protocol header (Single Source of Truth)
 │   └── comms_protocol.h
 ├── node1_stm32_main/       # STM32CubeIDE Project (FreeRTOS)
-└── node2_pico_motor/       # CMake Project (Bare-metal RP2040)</code></pre>
+└── node2_esp32_motor/      # ESP-IDF Project (FreeRTOS)</code></pre>
 
 <hr />
 
@@ -115,9 +115,8 @@
 
 <h3>Prerequisites</h3>
 <ul>
-<li><a href="[https://www.st.com/en/development-tools/stm32cubeide.html](https://www.st.com/en/development-tools/stm32cubeide.html)">STM32CubeIDE</a> (For Node 1)</li>
-<li><a href="[https://github.com/raspberrypi/pico-sdk](https://github.com/raspberrypi/pico-sdk)">Raspberry Pi Pico SDK &amp; CMake</a> (For Node 2)</li>
-<li>ARM GNU Toolchain (<code>arm-none-eabi-gcc</code>)</li>
+<li><a href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32CubeIDE</a> (For Node 1)</li>
+<li><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/">ESP-IDF Installation Manager</a> (For Node 2)</li>
 </ul>
 
 <h3>Building Node 1 (STM32)</h3>
@@ -128,13 +127,12 @@
 <li>Build the project and flash using an ST-Link.</li>
 </ol>
 
-<h3>Building Node 2 (Pico)</h3>
-<p>Open your terminal and run the following commands:</p>
-<pre><code>cd node2_pico_motor
-mkdir build &amp;&amp; cd build
-cmake ..
-make</code></pre>
-<p>Flash the resulting <code>.uf2</code> file to the Raspberry Pi Pico by holding the <strong>BOOTSEL</strong> button while plugging it in via USB, then drag and drop the file.</p>
+<h3>Building Node 2 (ESP32)</h3>
+<p>Open your ESP-IDF PowerShell Environment, navigate to the node directory, and run the following commands:</p>
+<pre><code>cd node2_esp32_motor
+idf.py set-target esp32
+idf.py build
+idf.py flash monitor</code></pre>
+<p>The <code>flash monitor</code> command will automatically flash the firmware via USB and open a serial monitor to view the ESP32's logging output.</p>
 
 <hr />
-
