@@ -626,3 +626,83 @@
 2026-07-22 22:19:05,373 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 3426mS.
 2026-07-22 22:19:05,375 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
 2026-07-22 22:19:05,380 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2026-07-22 23:49:11,951 [INFO] RtosManager:967 - Current active RTOS is FREERTOS [Cortex-M4NS]
+2026-07-22 23:49:12,230 [WARN] FreeRTOS:563 - Case being investigated as it may cause exception (when called to early by set config state
+2026-07-22 23:49:12,371 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2026-07-22 23:49:12,421 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2026-07-22 23:49:15,325 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 834209248 Bytes (1073741824)
+2026-07-22 23:49:16,356 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 859227336 Bytes (1073741824)
+2026-07-22 23:49:17,664 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 921767392 Bytes (1073741824)
+2026-07-22 23:50:12,361 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-07-22 23:50:12,361 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: FREERTOS
+2026-07-22 23:50:12,361 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-07-22 23:50:12,361 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-07-22 23:50:12,362 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-07-22 23:50:12,362 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-07-22 23:50:12,363 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2026-07-22 23:50:12,452 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\license.tmp_save
+2026-07-22 23:50:12,666 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\license.tmp
+2026-07-22 23:50:12,699 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\gpio.tmp_save
+2026-07-22 23:50:12,832 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\gpio.tmp
+2026-07-22 23:50:12,948 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2026-07-22 23:50:12,970 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_inc.tmp_save
+2026-07-22 23:50:13,078 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_inc.tmp
+2026-07-22 23:50:13,094 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_kernelInit.tmp_save
+2026-07-22 23:50:13,199 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_kernelInit.tmp
+2026-07-22 23:50:13,215 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_kernelStart.tmp_save
+2026-07-22 23:50:13,303 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_kernelStart.tmp
+2026-07-22 23:50:13,320 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_typedefs.tmp_save
+2026-07-22 23:50:13,385 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_typedefs.tmp
+2026-07-22 23:50:13,411 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_vars.tmp_save
+2026-07-22 23:50:13,517 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_vars.tmp
+2026-07-22 23:50:13,540 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_pfp.tmp_save
+2026-07-22 23:50:13,636 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_pfp.tmp
+2026-07-22 23:50:13,656 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_obj_creat.tmp_save
+2026-07-22 23:50:13,751 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_obj_creat.tmp
+2026-07-22 23:50:13,768 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_default_thread.tmp_save
+2026-07-22 23:50:13,848 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_default_thread.tmp
+2026-07-22 23:50:13,863 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_threads.tmp_save
+2026-07-22 23:50:13,924 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_threads.tmp
+2026-07-22 23:50:13,940 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2026-07-22 23:50:13,951 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_inc.tmp_save
+2026-07-22 23:50:14,025 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_inc.tmp
+2026-07-22 23:50:14,033 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_kernelInit.tmp_save
+2026-07-22 23:50:14,095 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_kernelInit.tmp
+2026-07-22 23:50:14,103 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_kernelStart.tmp_save
+2026-07-22 23:50:14,159 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_kernelStart.tmp
+2026-07-22 23:50:14,167 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_typedefs.tmp_save
+2026-07-22 23:50:14,229 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_typedefs.tmp
+2026-07-22 23:50:14,249 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_vars.tmp_save
+2026-07-22 23:50:14,320 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_vars.tmp
+2026-07-22 23:50:14,328 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_pfp.tmp_save
+2026-07-22 23:50:14,384 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_pfp.tmp
+2026-07-22 23:50:14,399 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_obj_creat.tmp_save
+2026-07-22 23:50:14,460 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_obj_creat.tmp
+2026-07-22 23:50:14,468 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_default_thread.tmp_save
+2026-07-22 23:50:14,533 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_default_thread.tmp
+2026-07-22 23:50:14,541 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_threads.tmp_save
+2026-07-22 23:50:14,595 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\rtos_threads.tmp
+2026-07-22 23:50:14,611 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Inc\FreeRTOSConfig.h_save
+2026-07-22 23:50:14,751 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Inc\FreeRTOSConfig.h
+2026-07-22 23:50:14,768 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Src\freertos.c_save
+2026-07-22 23:50:14,869 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Src\freertos.c
+2026-07-22 23:50:14,899 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Src\stm32f4xx_it.c_save
+2026-07-22 23:50:15,093 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Src\stm32f4xx_it.c
+2026-07-22 23:50:15,104 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Inc\stm32f4xx_it.h_save
+2026-07-22 23:50:15,179 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Inc\stm32f4xx_it.h
+2026-07-22 23:50:15,212 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Src\stm32f4xx_hal_msp.c_save
+2026-07-22 23:50:15,341 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Src\stm32f4xx_hal_msp.c
+2026-07-22 23:50:15,348 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\system.tmp_save
+2026-07-22 23:50:15,410 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\MXTmpFiles\system.tmp
+2026-07-22 23:50:15,432 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Inc\stm32f4xx_hal_conf.h_save
+2026-07-22 23:50:15,533 [INFO] CodeEngine:343 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Inc\stm32f4xx_hal_conf.h
+2026-07-22 23:50:15,591 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Inc\main.h_save
+2026-07-22 23:50:15,695 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Inc\main.h
+2026-07-22 23:50:15,715 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Src\main.c_save
+2026-07-22 23:50:15,871 [INFO] CodeEngine:287 - Generated code: C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\Core\Src\main.c
+2026-07-22 23:50:16,413 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 362mS.
+2026-07-22 23:50:16,420 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2026-07-22 23:50:16,537 [INFO] ConfigFileManager:1590 - The Die is : DIE431
+2026-07-22 23:50:17,625 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1204mS.
+2026-07-22 23:50:17,626 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2026-07-22 23:50:17,636 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.

@@ -16,7 +16,7 @@ runs on C11(GNU11). fun fact - i use C23(GNU23), so this was
 very good to know
 */
 
-init_uart(void)
+void init_uart(void)
 {
     // configure UART communication parameters
     uart_config_t uart_config = {
@@ -36,7 +36,7 @@ init_uart(void)
     by my motor pwm and direction. it is also unecessary for the stm32,
     since it will be sending string messages 
     */
-    ESP_ERROR_CHECK(uart_set_pin(UART_PORT_NUM, UART_TX, UART_RX, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE)));
+    ESP_ERROR_CHECK(uart_set_pin(UART_PORT_NUM, UART_TX, UART_RX, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
 
     // install UART drivers with ring buffer
     /* UART port number
@@ -49,7 +49,7 @@ init_uart(void)
 }
 
 // FreeRTOS task to continuously listen for data
-void rx_task(void)
+void rx_task(void* arg)
 {
     uint8_t incoming_data[128];
     
@@ -70,14 +70,11 @@ void rx_task(void)
 
 void app_main(void)
 {
-    while (1)
-    {
-        printf("Init UART bus... \n");
-        init_uart();
-        printf("UART listening on GPIO 16 (receiving wire) \n");
-        
-        // listener task
-        xTaskCreate(rx_task, "UART_RX_TASK", 2048, NULL, 10, NULL);
-    }
+    printf("Init UART bus... \n");
+    init_uart();
+    printf("UART listening on GPIO 16 (receiving wire) \n");
     
+    // listener task
+    xTaskCreate(rx_task, "UART_RX_TASK", 2048, NULL, 10, NULL);
+
 }
