@@ -48,12 +48,36 @@ init_uart(void)
     ESP_ERROR_CHECK(uart_driver_install(UART_PORT_NUM, UART_BUFSIZE*2, 0, 0, NULL, 0));
 }
 
+// FreeRTOS task to continuously listen for data
+void rx_task(void)
+{
+    uint8_t incoming_data[128];
+    
+    while (1)
+    {
+        // check ring buffer for new bytes
+        int length = uart_read_bytes(UART_PORT_NUM, incoming_data, sizeof(incoming_data) - 1, 20/portTICK_PERIOD_MS);
+    
+        if(length > 0)
+        {
+            // null-terminate the data, we need to read it as a string (char*)
+            incoming_data[length] = '\0';
+            printf("Received from STM32: %s\n", (char*)incoming_data);
+        }
+    }
+    
+}
+
 void app_main(void)
 {
     while (1)
     {
         printf("Init UART bus... \n");
-        vTaskDelay(1000/portTICK_PERIOD_MS); // 1000 ms delay cos why not
+        init_uart();
+        printf("UART listening on GPIO 16 (receiving wire) \n");
+        
+        // listener task
+        xTaskCreate(rx_task, "UART_RX_TASK", 2048, NULL, 10, NULL);
     }
     
 }
