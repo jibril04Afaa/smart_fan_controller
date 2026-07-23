@@ -1,10 +1,10 @@
-23:37:24 **** Incremental Build of configuration Debug for project stm32_workspace ****
+00:04:35 **** Incremental Build of configuration Debug for project stm32_workspace ****
 make -j12 all 
 arm-none-eabi-size  stm32_workspace.elf 
    text	   data	    bss	    dec	    hex	filename
-  10396	     12	   1644	  12052	   2f14	stm32_workspace.elf
+  24796	     96	  20744	  45636	   b244	stm32_workspace.elf
 Finished building: default.size.stdout
  
 
-23:37:24 Build Finished. 0 errors, 0 warnings. (took 328ms)
+00:04:35 Build Finished. 0 errors, 0 warnings. (took 402ms)
 

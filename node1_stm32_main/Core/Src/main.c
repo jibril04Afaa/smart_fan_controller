@@ -285,10 +285,24 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
+  char uart_buf[50];
+  int dummy_speed = 0;
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  sprintf(uart_buf, "FAN SPEED: %d\n", dummy_speed);
+
+	  // transmit packet over USART2
+	  HAL_UART_Transmit(&huart2, (uint8_t*)uart_buf, strlen(uart_buf), HAL_MAX_DELAY);
+
+	  dummy_speed += 10;
+	  if (dummy_speed > 1000)
+	  {
+		  dummy_speed = 0;
+	  }
+
+    osDelay(1000);
   }
   /* USER CODE END 5 */
 }
