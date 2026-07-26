@@ -8,7 +8,7 @@
 #define UART_PORT_NUM UART_NUM_2 // (USART2 in stm32cubeIDE)
 #define UART_TX 17 // GPIOP17
 #define UART_RX 16 // GPIOP16
-#define UART_BAUD_RATE 115200 // UART must be the same baud rate
+#define UART_BAUD_RATE 9600 // UART must be the same baud rate
 #define UART_BUFSIZE 1024
 
 /* i'm using void parameters for void functions because esp-idf 
@@ -73,8 +73,19 @@ void app_main(void)
     printf("Init UART bus... \n");
     init_uart();
     printf("UART listening on GPIO 16 (receiving wire) \n");
-    
+
+        
     // listener task
     xTaskCreate(rx_task, "UART_RX_TASK", 2048, NULL, 10, NULL);
+
+
+    /* loopback test cos the UART is BUGGING! */
+    // const char* test_msg = "ESP32 loopback success";
+    // while (1)
+    // {
+    //     uart_write_bytes(UART_PORT_NUM, test_msg, strlen(test_msg));
+    //     vTaskDelay(1000/portTICK_PERIOD_MS);
+    // }
+    
 
 }
