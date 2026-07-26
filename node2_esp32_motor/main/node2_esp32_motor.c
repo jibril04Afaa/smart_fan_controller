@@ -5,7 +5,7 @@
 #include "driver/gpio.h"
 
 // define UART pins
-#define UART_PORT_NUM UART_NUM_2 // (USART2 in stm32cubeIDE)
+#define UART_PORT_NUM UART_NUM_1 // (USART1 in stm32cubeIDE)
 #define UART_TX 17 // GPIOP17
 #define UART_RX 16 // GPIOP16
 #define UART_BAUD_RATE 9600 // UART must be the same baud rate
