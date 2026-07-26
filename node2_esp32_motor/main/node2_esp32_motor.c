@@ -11,8 +11,10 @@
 #define UART_BAUD_RATE 9600 // UART must be the same baud rate
 #define UART_BUFSIZE 1024
 
-/* i'm using void parameters for void functions because esp-idf 
-runs on C11(GNU11). fun fact - i use C23(GNU23), so this was
+/* i'm using void parameters for void 
+functions because esp-idf 
+runs on C11(GNU11). fun fact - 
+i use C23(GNU23), so this was
 very good to know
 */
 
