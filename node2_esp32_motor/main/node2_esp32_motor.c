@@ -18,6 +18,7 @@
 
 /* i'm using void parameters for void functions because esp-idf 
 runs on C11(GNU11). fun fact - i use C23(GNU23), so this was
+>>>>>>> ef61a35 (testing)
 very good to know
 */
 
@@ -52,6 +53,37 @@ void init_uart(void)
     Flags to allocate an interrupt*/
     ESP_ERROR_CHECK(uart_driver_install(UART_PORT_NUM, UART_BUFSIZE*2, 0, 0, NULL, 0));
 }
+
+void init_motor(void)
+{
+    // configure the Direction Pin (AIN1) as a standard GPIO output
+    gpio_reset_pin(MOTOR_DIR_PIN);
+    gpio_set_direction(MOTOR_DIR_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(MOTOR_DIR_PIN, 1); // set to 1, i.e, forward, AIN2 is hardwired to GND.
+
+    // 2. Configure the PWM Timer
+    ledc_timer_config_t ledc_timer = {
+        .speed_mode       = LEDC_LOW_SPEED_MODE,
+        .timer_num        = LEDC_TIMER_0,
+        .duty_resolution  = LEDC_TIMER_8_BIT, // 8-bit resolution (0-255 speed)
+        .freq_hz          = 5000,             // 5 kHz PWM frequency
+        .clk_cfg          = LEDC_AUTO_CLK
+    };
+    ESP_ERROR_CHECK(ledc_timer_config(&ledc_timer));
+
+    // configure the PWM Channel attached to GPIO 18
+    ledc_channel_config_t ledc_channel = {
+        .speed_mode     = LEDC_LOW_SPEED_MODE,
+        .channel        = LEDC_CHANNEL_0,
+        .timer_sel      = LEDC_TIMER_0,
+        .intr_type      = LEDC_INTR_DISABLE,
+        .gpio_num       = MOTOR_PWM_PIN,
+        .duty           = 0, // Start with motor off (0 duty cycle)
+        .hpoint         = 0
+    };
+    ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel));
+}
+
 
 void init_motor(void)
 {
@@ -130,6 +162,10 @@ void app_main(void)
     printf("Init UART bus... \n");
     init_uart();
     printf("UART listening on GPIO 16 (receiving wire) \n");
+
+    printf("Init Motor drivers... \n");
+    init_motor();
+    printf("Motor ready on GPIO 18 (PWM) and GPIO 19 (DIR)\n");
 
     printf("Init Motor drivers... \n");
     init_motor();
