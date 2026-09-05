@@ -46,3 +46,115 @@ arm-none-eabi-size  stm32_workspace.elf
    7712	     12	   1644	   9368	   2498	stm32_workspace.elf
 Finished building: default.size.stdout
  
+00:26:50 **** Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-gcc -o "node1_stm32_main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="node1_stm32_main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: node1_stm32_main.elf
+ 
+arm-none-eabi-size  node1_stm32_main.elf 
+arm-none-eabi-objdump -h -S node1_stm32_main.elf  > "node1_stm32_main.list"
+   text	   data	    bss	    dec	    hex	filename
+  24796	     96	  20744	  45636	   b244	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+Finished building: node1_stm32_main.list
+ 
+00:27:08 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-size  node1_stm32_main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24796	     96	  20744	  45636	   b244	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+00:28:14 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-size  node1_stm32_main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24796	     96	  20744	  45636	   b244	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+00:28:45 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-size  node1_stm32_main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24796	     96	  20744	  45636	   b244	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+02:23:11 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-size  node1_stm32_main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24796	     96	  20744	  45636	   b244	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+02:29:57 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-size  node1_stm32_main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24796	     96	  20744	  45636	   b244	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+02:32:17 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-size  node1_stm32_main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24796	     96	  20744	  45636	   b244	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+02:42:01 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/main.c: In function 'StartDefaultTask':
+../Core/Src/main.c:297:30: error: 'huart2' undeclared (first use in this function); did you mean 'huart1'?
+  297 |           HAL_UART_Transmit(&huart2, (uint8_t*)uart_buf, strlen(uart_buf), HAL_MAX_DELAY);
+      |                              ^~~~~~
+      |                              huart1
+../Core/Src/main.c:297:30: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+02:43:51 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "node1_stm32_main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="node1_stm32_main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: node1_stm32_main.elf
+ 
+arm-none-eabi-size  node1_stm32_main.elf 
+arm-none-eabi-objdump -h -S node1_stm32_main.elf  > "node1_stm32_main.list"
+   text	   data	    bss	    dec	    hex	filename
+  22300	     96	  20744	  43140	   a884	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+Finished building: node1_stm32_main.list
+ 
+02:48:45 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-size  node1_stm32_main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22300	     96	  20744	  43140	   a884	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+02:53:53 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-size  node1_stm32_main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22300	     96	  20744	  43140	   a884	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+02:56:22 **** Incremental Build of configuration Debug for project node1_stm32_main ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "node1_stm32_main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\jibri\OneDrive\Desktop\code\projects\smart-fan-controller\node1_stm32_main\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="node1_stm32_main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: node1_stm32_main.elf
+ 
+arm-none-eabi-size  node1_stm32_main.elf 
+arm-none-eabi-objdump -h -S node1_stm32_main.elf  > "node1_stm32_main.list"
+   text	   data	    bss	    dec	    hex	filename
+  22296	     96	  20744	  43136	   a880	node1_stm32_main.elf
+Finished building: default.size.stdout
+ 
+Finished building: node1_stm32_main.list
+ 

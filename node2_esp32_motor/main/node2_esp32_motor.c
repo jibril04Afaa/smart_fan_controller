@@ -9,7 +9,7 @@
 #define UART_PORT_NUM UART_NUM_1 // (USART1 in stm32cubeIDE)
 #define UART_TX 17 // GPIOP17
 #define UART_RX 16 // GPIOP16
-#define UART_BAUD_RATE 9600 // UART must be the same baud rate
+#define UART_BAUD_RATE 115200 // UART must be the same baud rate
 #define UART_BUFSIZE 1024
 
 // define motor pins
@@ -100,12 +100,20 @@ void rx_task(void* arg)
             incoming_data[length] = '\0';
             printf("Received from STM32: %s\n", (char*)incoming_data);
 
-            // if STM32 sends "SPIN", set PWM duty cycle to 50% (128 out of 255)
-            if (strstr((char*)incoming_data, "SPIN") != NULL) {
-                printf("Spin command received! Starting motor...\n");
-                ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 128); 
-                ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
-            }
+        // if STM32 sends "SPIN", set PWM duty cycle to 50% (128 out of 255)
+        int target_speed = 0;
+
+        // sscanf will look for "FAN SPEED: " and extract the number that comes after it
+        if (sscanf((char*)incoming_data, "FAN SPEED: %d", &target_speed) == 1) 
+        {
+            printf("Speed command received! Modulating motor to %d...\n", target_speed);
+            
+            // Map the 0-1000 STM32 speed to the 0-255 ESP32 PWM duty cycle
+            uint32_t duty_cycle = (target_speed * 255) / 1000;
+            
+            ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, duty_cycle); 
+            ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
+        }
             // if STM32 sends "STOP", set PWM duty cycle to 0
             else if (strstr((char*)incoming_data, "STOP") != NULL) {
                 printf("Stop command received! Halting motor...\n");
